@@ -19,7 +19,7 @@ class NasaRepository: KoinComponent {
     private val appModuleWebServiceNasa :AppModuleWebServiceNasa by inject()
     private val nasaWebService:NasaWebService = appModuleWebServiceNasa.provideWebServiceSecarApi()
     private val apodDao:ApodDao by inject()
-    val apiKey = "Oo4xmbM1x4oTRfRVoXpTq1igHydUF4h5IMdjD6DQ"
+    val apiKey = "xxxxxxxxxxxxxxxxxx"
 
 
 
