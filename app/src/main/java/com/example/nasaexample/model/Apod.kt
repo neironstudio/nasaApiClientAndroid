@@ -1,9 +1,14 @@
 package com.example.nasaexample.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 // Astronomy Picture of the Day
+@Entity
 class Apod {
+ @PrimaryKey(autoGenerate = true)
+ var id:Int?=null
  @SerializedName("date")
  var date:String?=null
  @SerializedName("explanation")

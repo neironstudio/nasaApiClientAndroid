@@ -1,5 +1,6 @@
 package com.example.nasaexample.di
 
+import com.example.nasaexample.db.AppDatabase
 import com.example.nasaexample.simplecoinexample.HelloRepository
 import com.example.nasaexample.simplecoinexample.HelloRepositoryImpl
 import com.example.nasaexample.simplecoinexample.MySimplePresenter
@@ -13,9 +14,8 @@ import org.koin.dsl.module
 val applicationModule = module(override = true) {
 
     single { SharedPrefenceHelper(androidContext()) }
-    single {AppModuleWebServiceNasa(androidContext())}
-   // single { AppModuleWebServiceSecarApi(androidContext()) }
-   // single { AppDatabase.getInstance(androidContext()).cesarModelDao() }
+    single { AppModuleWebServiceNasa(androidContext())}
+    single { AppDatabase.getInstance(androidContext()).ApodDao() }
 
    // single instance of HelloRepository
    single<HelloRepository> { HelloRepositoryImpl() }
